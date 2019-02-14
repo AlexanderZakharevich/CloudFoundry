@@ -50,7 +50,7 @@ modules:
         build-parameters:
             builder: grunt
         requires:
-            - {name: pt_uaa}
+            - {name: pt_uaa}  
     -
         name: user_display
         type: html5
@@ -61,7 +61,7 @@ modules:
         build-parameters:
             builder: grunt
         requires:
-            - {name: pt_uaa}
+            - {name: pt_uaa}                      
     -
         name: router
         type: nodejs
@@ -76,8 +76,8 @@ modules:
             - {name: pt_conn}
             - {name: pt_uaa}
             - {name: pt_router}
-            # - {name: pt_portal}
-            - {name: pt_service, group: destinations, properties: {name: pt_service, url: '~{url}', forwardAuthToken: true}}
+            # - {name: pt_portal}            
+            - {name: pt_service, group: destinations, properties: {name: pt_service, url: '~{url}'}}
     -
         name: deployer
         type: com.sap.html5.application-content
@@ -122,8 +122,8 @@ resources:
     -
         name: pt_router
         parameters:
-            service-plan: app-runtime
-            service: html5-apps-repo
+          service-plan: app-runtime
+          service: html5-apps-repo
         type: org.cloudfoundry.managed-service
     -
         name: pt_conn
@@ -137,4 +137,3 @@ resources:
         parameters:
             service: destination
             service-plan: lite
-                         

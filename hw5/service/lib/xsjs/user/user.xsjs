@@ -3,27 +3,20 @@ const userLib = new Userlib($.hdb.getConnection({
     treatDateAsUTC: true
 }));
 
-function forRequest(obj) {
-    userLib.obj(JSON.parse($.request.body.asString()));
-}
-
 (function () {
     (function handleRequest() {
         try {
             switch ($.request.method) {
                 case $.net.http.PUT : {
-
                     userLib.doPut(JSON.parse($.request.body.asString()));
                     break;
                 }
                 case $.net.http.POST : {
-
-                     userLib.doPost(JSON.parse($.request.body.asString()));
+                    userLib.doPost(JSON.parse($.request.body.asString()));
                     break;
                 }
                 case $.net.http.DEL : {
-
-                     userLib.doDelete($.request.parameters.get("userid"));
+                    userLib.doDelete($.request.parameters.get("userid"));
                     break;
                 }
                 case $.net.http.GET : {
