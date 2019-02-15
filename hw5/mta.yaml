@@ -76,8 +76,8 @@ modules:
             - {name: pt_conn}
             - {name: pt_uaa}
             - {name: pt_router}
-            # - {name: pt_portal}            
-            - {name: pt_service, group: destinations, properties: {name: pt_service, url: '~{url}'}}
+            # - {name: pt_portal}
+            - {name: pt_service, group: destinations, properties: {name: pt_service, url: '~{url}', forwardAuthToken: true}}
     -
         name: deployer
         type: com.sap.html5.application-content
