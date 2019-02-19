@@ -12,32 +12,18 @@
             "name": "Component.js"
         },
         {
-            "name": "controller\\App-dbg.controller.js",
+            "name": "controller\\Display-dbg.controller.js",
             "isDebug": true
         },
         {
-            "name": "controller\\App.controller.js"
+            "name": "controller\\Display.controller.js"
         },
         {
-            "name": "controller\\BaseController-dbg.js",
+            "name": "css\\style-dbg.css",
             "isDebug": true
         },
         {
-            "name": "controller\\BaseController.js"
-        },
-        {
-            "name": "controller\\Details-dbg.controller.js",
-            "isDebug": true
-        },
-        {
-            "name": "controller\\Details.controller.js"
-        },
-        {
-            "name": "controller\\NotFound-dbg.controller.js",
-            "isDebug": true
-        },
-        {
-            "name": "controller\\NotFound.controller.js"
+            "name": "css\\style.css"
         },
         {
             "name": "di.code-validation.core_issues.json"
@@ -47,14 +33,7 @@
             "raw": "i18n\\i18n.properties"
         },
         {
-            "name": "index-dbg.js",
-            "isDebug": true
-        },
-        {
             "name": "index.html"
-        },
-        {
-            "name": "index.js"
         },
         {
             "name": "manifest.json"
@@ -67,16 +46,10 @@
             "name": "tmp\\Component.js"
         },
         {
-            "name": "tmp\\controller\\App.controller.js"
+            "name": "tmp\\controller\\Display.controller.js"
         },
         {
-            "name": "tmp\\controller\\BaseController.js"
-        },
-        {
-            "name": "tmp\\controller\\Details.controller.js"
-        },
-        {
-            "name": "tmp\\controller\\NotFound.controller.js"
+            "name": "tmp\\css\\style.css"
         },
         {
             "name": "tmp\\i18n\\i18n.properties",
@@ -86,46 +59,22 @@
             "name": "tmp\\index.html"
         },
         {
-            "name": "tmp\\index.js"
-        },
-        {
             "name": "tmp\\manifest.json"
         },
         {
-            "name": "tmp\\view\\App.view.xml"
-        },
-        {
-            "name": "tmp\\view\\Details.view.xml"
-        },
-        {
-            "name": "tmp\\view\\NotFound.view.xml"
+            "name": "tmp\\view\\Display.view.xml"
         },
         {
             "name": "tmp-dbg\\Component.js"
         },
         {
-            "name": "tmp-dbg\\controller\\App.controller.js"
+            "name": "tmp-dbg\\controller\\Display.controller.js"
         },
         {
-            "name": "tmp-dbg\\controller\\BaseController.js"
+            "name": "tmp-dbg\\css\\style.css"
         },
         {
-            "name": "tmp-dbg\\controller\\Details.controller.js"
-        },
-        {
-            "name": "tmp-dbg\\controller\\NotFound.controller.js"
-        },
-        {
-            "name": "tmp-dbg\\index.js"
-        },
-        {
-            "name": "view\\App.view.xml"
-        },
-        {
-            "name": "view\\Details.view.xml"
-        },
-        {
-            "name": "view\\NotFound.view.xml"
+            "name": "view\\Display.view.xml"
         },
         {
             "name": "xs-app.json"
