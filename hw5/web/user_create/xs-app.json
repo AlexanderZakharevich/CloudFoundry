@@ -10,18 +10,18 @@
          "authenticationType":"xsuaa",
          "scope":{  
             "GET":[  
-               "$XSAPPNAME.himta.view"
+               "$XSAPPNAME.dev.view"
             ],
             "POST":[  
-               "$XSAPPNAME.himta.edit"
+               "$XSAPPNAME.dev.edit"
             ],
             "PUT":[  
-               "$XSAPPNAME.himta.edit"
+               "$XSAPPNAME.dev.edit"
             ],
             "DELETE":[  
-               "$XSAPPNAME.himta.edit"
+               "$XSAPPNAME.dev.edit"
             ],
-            "default":"$XSAPPNAME.himta.view"
+            "default":"$XSAPPNAME.dev.view"
          }
       }
    ]

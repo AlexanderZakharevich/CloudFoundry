@@ -15,7 +15,7 @@
 		},
 		"dataSources": {
 			"mainService": {
-				"uri": "https://p2001091459trial-fty3-dev-service.cfapps.eu10.hana.ondemand.com/xsodata/dev.xsodata/",
+				"uri": "https://p2001091459trial-fty3-dev-router.cfapps.eu10.hana.ondemand.com/xsodata/dev.xsodata",
 				"type": "OData",
 				"settings": {
 					"odataVersion": "2.0"
