@@ -1,6 +1,6 @@
-<mvc:View controllerName="user_display.controller.Display" 
-  xmlns="sap.m" 
-  xmlns:l="sap.ui.layout" 
+<mvc:View controllerName="user_display.controller.Display"
+  xmlns="sap.m"
+  xmlns:l="sap.ui.layout"
   xmlns:mvc="sap.ui.core.mvc">
   <Shell>
     <App>
@@ -10,35 +10,41 @@
             <content>
               <l:HorizontalLayout>
                 <l:content>
-                  <Button text="Refresh" press="onRefresh" icon="sap-icon://refresh" class="sapUiTinyMargin">
+                  <Button text="Refresh" press="onRefresh" icon="sap-icon://refresh" class="sapUiTinyMargin ref_btn" type="Ghost">
                     <layoutData>
                       <FlexItemData growFactor="1" />
                     </layoutData>
                   </Button>
-                  <Button text="Create" press="onCreate" icon="sap-icon://add" class="sapUiTinyMargin">
+                  <Button text="Edit" press="onUpdate" icon="sap-icon://edit" class="sapUiTinyMargin edit_btn">
                     <layoutData>
                       <FlexItemData growFactor="1" />
                     </layoutData>
                   </Button>
-                  <Button text="Edit" press="onUpdate" icon="sap-icon://edit" class="sapUiTinyMargin">
+                  <Button text="Create" type="Accept" press="onCreate" icon="sap-icon://add" class="sapUiTinyMargin create_btn">
                     <layoutData>
                       <FlexItemData growFactor="1" />
                     </layoutData>
                   </Button>
-                  <Button text="Delete" press="onDelete" icon="sap-icon://delete" class="sapUiTinyMargin">
+                  <Button text="Delete" press="onDelete" type="Reject" icon="sap-icon://delete" class="sapUiTinyMargin del_btn">
                     <layoutData>
                       <FlexItemData growFactor="1" />
                     </layoutData>
                   </Button>
                 </l:content>
               </l:HorizontalLayout>
-              <Table id="details" items = "{path: 'users>/Users'}" mode="SingleSelectMaster" selectionChange="onSelectionChange">
+              <Table id="details" items = "{path: 'users>/Users'}" mode="SingleSelect" selectionChange="onSelectionChange">
                 <columns>
-                  <Column id="userIdColumn">
+                  <Column id="userIdColumn" width="100px" hAlign="Center" sortIndicator="Ascending">
                     <Text text="{i18n>userIdText}" />
                   </Column>
-                  <Column id="userNameColumn">
+                  <Column id="userNameColumn" width="200px" hAlign="Center">
                     <Text text="{i18n>userNameText}" />
+                  </Column>
+                  <Column id="userCreateTS" hAlign="Center">
+                    <Text text="{i18n>createUserTS}" />
+                  </Column>
+                  <Column id="userUpdateTS" hAlign="Center">
+                    <Text text="{i18n>updateUserTS}" />
                   </Column>
                 </columns>
                 <items>
@@ -48,6 +54,12 @@
                     </cells>
                     <cells>
                       <Label text="{users>name}" />
+                    </cells>
+                    <cells>
+                      <Label text="{users>ts_create}" />
+                    </cells>
+                    <cells>
+                      <Label text="{users>ts_update}" />
                     </cells>
                   </ColumnListItem>
                 </items>
