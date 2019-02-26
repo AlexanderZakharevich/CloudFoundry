@@ -35,16 +35,16 @@
               <Table id="details" items = "{path: 'sports>/SportTeam'}" mode="SingleSelect" selectionChange="onSelectionChange">
                 <columns>
                   <Column id="userIdColumn" width="100px" hAlign="Center" sortIndicator="Ascending">
-                    <Text text="{i18n>userIdText}" />
+                    <Text text="{i18n>sportIdText}" />
                   </Column>
                   <Column id="userNameColumn" width="200px" hAlign="Center">
-                    <Text text="{i18n>userNameText}" />
+                    <Text text="{i18n>sportNameText}" />
                   </Column>
                   <Column id="userCreateTS" hAlign="Center">
-                    <Text text="{i18n>createUserTS}" />
+                    <Text text="{i18n>createSportTS}" />
                   </Column>
                   <Column id="userUpdateTS" hAlign="Center">
-                    <Text text="{i18n>updateUserTS}" />
+                    <Text text="{i18n>updateSportTS}" />
                   </Column>
                 </columns>
                 <items>
