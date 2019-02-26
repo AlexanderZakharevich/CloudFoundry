@@ -31,7 +31,7 @@ sap.ui.define([
 					new sap.m.Label({
 					  width: "100px",
 					  design: "Bold",
-					  text: "User ID:"
+					  text: "Sport ID:"
 					}).addStyleClass("popup_label"),
 					new sap.m.Input("UserID_inp", {
 					  width: "230px",
@@ -45,7 +45,7 @@ sap.ui.define([
 					new sap.m.Label({
 					  width: "100px",
 					  design: "Bold",
-					  text: "User Name:"
+					  text: "Sport Name:"
 					}).addStyleClass("popup_label"),
 					new sap.m.Input("UserName_inp", {
 					  value: "",
@@ -108,7 +108,7 @@ sap.ui.define([
 					new sap.m.Label({
 					  width: "100px",
 					  design: "Bold",
-					  text: "User ID:"
+					  text: "Sport ID:"
 					}).addStyleClass("popup_label"),
 					new sap.m.Input("UserID_inp", {
 					  width: "230px",
@@ -122,7 +122,7 @@ sap.ui.define([
 					new sap.m.Label({
 					  width: "100px",
 					  design: "Bold",
-					  text: "User Name:"
+					  text: "Sport Name:"
 					}).addStyleClass("popup_label"),
 					new sap.m.Input("UserName_inp", {
 					  value: oUserName,
