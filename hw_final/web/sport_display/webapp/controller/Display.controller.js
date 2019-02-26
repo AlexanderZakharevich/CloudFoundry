@@ -5,8 +5,6 @@ sap.ui.define([
 	return Controller.extend("sport_display.controller.Detail", {
 
 	  onInit: function() {
-		/*var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
-		oRouter.getRoute("detail").attachPatternMatched(this._onObjectMatched, this);*/
 		var oList = this.byId("details");
 		this._oList = oList;
 	  },
@@ -194,36 +192,7 @@ sap.ui.define([
 		$.ajax(settings).done(function(response) {
 		  sap.m.MessageToast.show("Deleted", { duration: 2000 });
 		});
-
-		/*This way is not working*/
-		//var sPath = "/SportTeam('" + oUserID + "')";
-		//var sServiceUrl = "https://p2001079623trial-df43r34-dev-service.cfapps.eu10.hana.ondemand.com/xsodata/dev.xsodata";
-
-		//var oModel = new sap.ui.model.odata.v2.ODataModel(sServiceUrl, true);
-		//oModel.remove(sPath);
-
-		//oModel.setRefreshAfterChange(false);
 	  }
-	  /*_onObjectMatched: function (oEvent) {
-		  this.byId("PeopleDetailPanel").
-		  this.getView().bindElement({
-			  path: decodeURIComponent(oEvent.getParameter("arguments").invoicePath),
-			  model: "people"
-		  }
-		  );
-		  console.log(this.byId("PeopleDetailPanel").getBindingContext('people'));
 	  },
-	  onNavBack: function () {
-		  var oHistory, sPreviousHash;
-
-		  oHistory = History.getInstance();
-		  sPreviousHash = oHistory.getPreviousHash();
-
-		  if (sPreviousHash !== undefined) {
-			window.history.go(-1);
-		  } else {
-			this.getRouter().navTo("appHome", {}, true);
-		  }
-		}*/
 	});
   });
