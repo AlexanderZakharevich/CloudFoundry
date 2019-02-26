@@ -1,0 +1,28 @@
+service namespace "dev"{
+
+    "dev::SportTeam" as "SportTeam"
+                navigates("SportTeam_2_Address" as "toAddress", "SportTeam_2_Cars" as "toCars")
+            create using "xsjs.user:createUsr.xsjslib::sportsCreate"
+            update using "xsjs.user:updateUsr.xsjslib::sportsUpdate"
+            delete using "xsjs.user:deleteUsr.xsjslib::sportsDelete";
+
+    "dev::ExtraInfo.Address" as "Address"
+            create forbidden
+            update forbidden
+            delete forbidden;
+
+    "dev::ExtraInfo.Cars" as "Cars"
+                navigates("Cars_2_User" as "toUser")
+            create forbidden
+            update forbidden
+            delete forbidden;
+
+    association "SportTeam_2_Address" principal "SportTeam"("sportid")
+            multiplicity "1" dependent "Address"("sportid") multiplicity "1";
+
+    association "SportTeam_2_Cars" principal "SportTeam"("sportid")
+            multiplicity "1" dependent "Cars"("sportid") multiplicity "*";
+
+    association "Cars_2_User" principal "Cars"("sportid")
+            multiplicity "1" dependent "SportTeam"("sportid") multiplicity "1";
+}

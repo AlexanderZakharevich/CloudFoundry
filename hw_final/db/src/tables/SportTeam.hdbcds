@@ -1,0 +1,19 @@
+namespace dev;
+
+using dev::ExtraInfo.Address;
+using dev::ExtraInfo.Cars;
+
+
+entity SportTeam {
+    @Comment: 'Id of SportTeam'
+    key sportid : String(4);
+    @Comment: 'Description'
+    name : String(100);
+    @Comment: 'Updated'
+    ts_update: UTCDateTime;
+    @Comment: 'Created'
+    ts_create: UTCDateTime;
+
+    toCars : Association[*] to Cars on toCars.sportid = sportid;
+    toAddress : Association[1] to Address on toAddress.sportid = sportid;
+};

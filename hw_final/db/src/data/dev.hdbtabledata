@@ -1,0 +1,52 @@
+{
+  "format_version": 1,
+  "imports": [
+    {
+      "target_table": "dev::SportTeam",
+      "source_data": {
+        "data_type": "CSV",
+        "file_name": "dev::SportTeam.csv",
+        "has_header": true
+      },
+      "import_settings": {
+        "import_columns": [
+          "sportid",
+          "name",
+          "ts_create",
+          "ts_update"
+        ]
+      }
+    },
+    {
+      "target_table": "dev::ExtraInfo.Address",
+      "source_data": {
+        "data_type": "CSV",
+        "file_name": "dev::Address.csv",
+        "has_header": true
+      },
+      "import_settings": {
+        "import_columns": [
+					"sportid",
+					"city",
+					"strt",
+					"hnum"
+        ]
+      }
+    },
+    {
+      "target_table": "dev::ExtraInfo.Cars",
+      "source_data": {
+        "data_type": "CSV",
+        "file_name": "dev::Cars.csv",
+        "has_header": true
+      },
+      "import_settings": {
+        "import_columns": [
+					"crid",
+          "sportid",
+          "name"
+        ]
+      }
+    }
+  ]
+}
